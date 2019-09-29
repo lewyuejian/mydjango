@@ -1,0 +1,22 @@
+<body>
+
+    <h1>欢迎登录！</h1>
+    <form action="/login/" method="post">
+        {% if login_form.captcha.errors %}
+            <div class="alert alert-warning">{{ login_form.captcha.errors }}</div>
+        {% elif message %}
+              <div class="alert alert-warning">{{ message }}</div>
+        {% endif %}
+        {% csrf_token %}
+        <p>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <input type="text" name="password">
+        </p>
+        <p>
+            <input type="submit" value="登录">
+        </p>
+        <hr>
+    </form>
+</body>

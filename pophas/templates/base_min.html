@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .nav{
+            text-align: center;
+            line-height: 40px;
+            width: 100%;
+            background-color: #2459a2;
+            color: white;
+            font-size: 20px;
+        }
+        .left{
+            width: 20%;
+            min-height: 600px;
+            overflow: auto;
+            background-color: lightgray;
+        }
+        .manage{
+            text-align: center;
+            padding: 20px 0px;<!-- 上下20，左右 -->
+            margin: 20px 0;
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .content{
+            width: 70px;
+            min-height: 600px;
+        }
+        .left,.content{
+            float: left;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="nav">标题</div>
+
+    <div class="left">
+        <div class="student manage"><a href="student.html">学生管理</a></div>
+        <div class="teacher manage"><a href="">教师管理</a></div>
+        <div class="course manage"><a href="">课程管理</a></div>
+        <div class="classes manage"><a href="">班级管理</a></div>
+    </div>
+    <div class="content">
+
+
+       {% block content %}加了一个快，和结束标志
+        <h1>welcome</h1>
+        {% endblock %}
+
+    </div>
+</div>
+</body>
+</html>
